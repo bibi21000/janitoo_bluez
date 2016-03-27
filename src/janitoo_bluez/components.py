@@ -70,19 +70,18 @@ class SpyComponent(JNTComponent):
         """
         """
         oid = kwargs.pop('oid', 'bluez.spy')
-        name = kwargs.pop('name', "Spy for bluetooth")
-        product_name = kwargs.pop('product_name', "Spy for bluetooth")
-        product_type = kwargs.pop('product_type', "Spy for bluetooth")
+        name = kwargs.pop('name', "Spyer")
+        product_name = kwargs.pop('product_name', "Spy for bluetooth devices")
+        product_type = kwargs.pop('product_type', "Spy for bluetooth devices")
         product_manufacturer = kwargs.pop('product_manufacturer', "Janitoo")
         JNTComponent.__init__(self, oid=oid, bus=bus, addr=addr, name=name,
                 product_name=product_name, product_type=product_type, product_manufacturer="Janitoo", **kwargs)
         logger.debug("[%s] - __init__ node uuid:%s", self.__class__.__name__, self.uuid)
 
         uuid="presence"
-        self.values[uuid] = self.value_factory['sensor_boolean'](options=self.options, uuid=uuid,
+        self.values[uuid] = self.value_factory['sensor_presence'](options=self.options, uuid=uuid,
             node_uuid=self.uuid,
             help='The presence of a bluetooth device',
-            label='Presence',
         )
         poll_value = self.values[uuid].create_poll_value(default=300)
         self.values[poll_value.uuid] = poll_value
