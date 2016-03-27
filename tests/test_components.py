@@ -49,10 +49,10 @@ from janitoo.runner import jnt_parse_args
 from janitoo.options import JNTOptions
 from janitoo.utils import HADD, HADD_SEP, CADD, json_dumps, json_loads
 
-from janitoo_raspberry_1wire.bus_1wire import OnewireBus
-from janitoo_raspberry_1wire.thread_1wire import Rpi1wireThread
-import janitoo_raspberry_1wire.components as components
-
+#~ from janitoo_raspberry_1wire.bus_1wire import OnewireBus
+#~ from janitoo_raspberry_1wire.thread_1wire import Rpi1wireThread
+#~ import janitoo_raspberry_1wire.components as components
+#~
 class TestSpyComponent(JNTTComponent, JNTTComponentCommon):
     """Test the component
     """
