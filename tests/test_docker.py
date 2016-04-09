@@ -41,3 +41,19 @@ from janitoo.runner import Runner, jnt_parse_args
 from janitoo.server import JNTServer
 from janitoo.utils import HADD_SEP, HADD
 
+from janitoo.server import JNTServer
+
+class TestSerser(JNTTDockerServer, JNTTDockerServerCommon):
+    """Test the server
+    """
+    loglevel = logging.DEBUG
+    path = '/tmp/janitoo_test'
+    broker_user = 'toto'
+    broker_password = 'toto'
+    server_class = JNTServer
+    server_conf = "tests/data/janitoo_bluez.conf"
+    hadds = [HADD%(157,0), HADD%(157,1)]
+
+    def test_040_server_start_no_error_in_log(self):
+        JNTTDockerServer.onlyDockerTest()
+        JNTTDockerServerCommon.minimal_040_server_start_reload_restart(self)
