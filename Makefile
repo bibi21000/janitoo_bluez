@@ -152,7 +152,7 @@ docker-deps:
 docker-tests:
 	@echo
 	@echo "Docker tests for ${MODULENAME} start."
-	-[ -f tests/test_docker.py ] && $(NOSE) $(NOSEOPTS) $(NOSEDOCKER) tests/test_docker.py
+	[ -f tests/test_docker.py ] && $(NOSE) $(NOSEOPTS) $(NOSEDOCKER) tests/test_docker.py
 	@echo
 	@echo "Docker tests for ${MODULENAME} finished."
 
