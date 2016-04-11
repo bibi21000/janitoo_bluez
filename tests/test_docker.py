@@ -43,7 +43,7 @@ from janitoo.utils import HADD_SEP, HADD
 
 from janitoo.server import JNTServer
 
-class TestSerser(JNTTDockerServer, JNTTDockerServerCommon):
+class TestBluezSerser(JNTTDockerServer, JNTTDockerServerCommon):
     """Test the server
     """
     loglevel = logging.DEBUG
