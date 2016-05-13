@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>janitoo_bluez package &mdash; janitoo_bluez 0.0.6 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+    <script type="text/javascript" src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="janitoo_bluez 0.0.6 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          janitoo_bluez</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.0.6</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../tools/index.html">Tools</a></li>
+                <li><a href="#">Reference</a></li>
+                <li><a href="../extensions/index.html">Janitoo extensions</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="simple">
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="janitoo-bluez-package">
+<h1>janitoo_bluez package<a class="headerlink" href="#janitoo-bluez-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-janitoo_bluez.bus_bluez">
+<span id="janitoo-bluez-bus-bluez-module"></span><h2>janitoo_bluez.bus_bluez module<a class="headerlink" href="#module-janitoo_bluez.bus_bluez" title="Permalink to this headline">¶</a></h2>
+<p>The Raspberry camera worker</p>
+<p>Installation :</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install python-pycamera
+</pre></div>
+</div>
+<dl class="class">
+<dt id="janitoo_bluez.bus_bluez.BluezBus">
+<em class="property">class </em><tt class="descclassname">janitoo_bluez.bus_bluez.</tt><tt class="descname">BluezBus</tt><big>(</big><em>oid='bluez'</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/bus_bluez.html#BluezBus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.bus_bluez.BluezBus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">janitoo.bus.JNTBus</span></tt></p>
+<p>A pseudo-bus to handle bluetooth</p>
+<dl class="method">
+<dt id="janitoo_bluez.bus_bluez.BluezBus.check_heartbeat">
+<tt class="descname">check_heartbeat</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/bus_bluez.html#BluezBus.check_heartbeat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.bus_bluez.BluezBus.check_heartbeat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check that the bus is &#8216;available&#8217;. Is replaced by the node one when it&#8217;s creates</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-janitoo_bluez.components">
+<span id="janitoo-bluez-components-module"></span><h2>janitoo_bluez.components module<a class="headerlink" href="#module-janitoo_bluez.components" title="Permalink to this headline">¶</a></h2>
+<p>The Raspberry camera worker</p>
+<p>Installation :</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install python-pycamera
+</pre></div>
+</div>
+<dl class="class">
+<dt id="janitoo_bluez.components.SpyComponent">
+<em class="property">class </em><tt class="descclassname">janitoo_bluez.components.</tt><tt class="descname">SpyComponent</tt><big>(</big><em>bus=None</em>, <em>addr=None</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">janitoo.component.JNTComponent</span></tt></p>
+<p>A spy component for bluetooth</p>
+<dl class="method">
+<dt id="janitoo_bluez.components.SpyComponent.check_devices">
+<tt class="descname">check_devices</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.check_devices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.check_devices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a check using a timer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="janitoo_bluez.components.SpyComponent.check_heartbeat">
+<tt class="descname">check_heartbeat</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.check_heartbeat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.check_heartbeat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check that the component is &#8216;available&#8217;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="janitoo_bluez.components.SpyComponent.on_check">
+<tt class="descname">on_check</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.on_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.on_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a check using a timer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="janitoo_bluez.components.SpyComponent.start">
+<tt class="descname">start</tt><big>(</big><em>mqttc</em><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the component.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="janitoo_bluez.components.SpyComponent.stop">
+<tt class="descname">stop</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the component.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="janitoo_bluez.components.SpyComponent.stop_check">
+<tt class="descname">stop_check</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.stop_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.stop_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the sonic component</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="janitoo_bluez.components.make_spy">
+<tt class="descclassname">janitoo_bluez.components.</tt><tt class="descname">make_spy</tt><big>(</big><em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#make_spy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.make_spy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-janitoo_bluez.thread_bluez">
+<span id="janitoo-bluez-thread-bluez-module"></span><h2>janitoo_bluez.thread_bluez module<a class="headerlink" href="#module-janitoo_bluez.thread_bluez" title="Permalink to this headline">¶</a></h2>
+<p>The bluez</p>
+<dl class="class">
+<dt id="janitoo_bluez.thread_bluez.BluezThread">
+<em class="property">class </em><tt class="descclassname">janitoo_bluez.thread_bluez.</tt><tt class="descname">BluezThread</tt><big>(</big><em>options={}</em><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/thread_bluez.html#BluezThread"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.thread_bluez.BluezThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">janitoo.thread.JNTBusThread</span></tt></p>
+<p>The I2C thread</p>
+<dl class="method">
+<dt id="janitoo_bluez.thread_bluez.BluezThread.init_bus">
+<tt class="descname">init_bus</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/thread_bluez.html#BluezThread.init_bus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.thread_bluez.BluezThread.init_bus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build the bus</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="janitoo_bluez.thread_bluez.make_thread">
+<tt class="descclassname">janitoo_bluez.thread_bluez.</tt><tt class="descname">make_thread</tt><big>(</big><em>options</em>, <em>force=False</em><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/thread_bluez.html#make_thread"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.thread_bluez.make_thread" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-janitoo_bluez">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-janitoo_bluez" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Sébastien GALLET aka bibi2100 &lt;bibi21000@gmail.com&gt;.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

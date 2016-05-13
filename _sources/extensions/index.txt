@@ -1,0 +1,18 @@
+janitoo_bluez package
+=====================
+
+Show janitoo's extensions.
+
+Core extensions
+---------------
+
+Threads
+^^^^^^^
+
+ - bluez (janitoo_bluez.thread_bluez:make_thread)
+
+Components
+^^^^^^^^^^
+
+ - bluez.spy (janitoo_bluez.components:make_spy)
+
