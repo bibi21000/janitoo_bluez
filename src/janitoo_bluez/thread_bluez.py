@@ -52,7 +52,7 @@ OID = 'bluez'
 
 
 def make_thread(options, force=False):
-    if get_option_autostart(options, OID) == True or force:
+    if get_option_autostart(options, OID) or force:
         return BluezThread(options)
     else:
         return None
