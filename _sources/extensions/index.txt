@@ -1,18 +1,7 @@
-janitoo_bluez package
-=====================
+Janitoo's extensions
+====================
 
-Show janitoo's extensions.
+This package contains the following extensions for Janitoo.
 
-Core extensions
----------------
-
-Threads
-^^^^^^^
-
- - bluez (janitoo_bluez.thread_bluez:make_thread)
-
-Components
-^^^^^^^^^^
-
- - bluez.spy (janitoo_bluez.components:make_spy)
+.. jnt-extensions::
 
