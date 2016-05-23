@@ -81,5 +81,5 @@ class BluezBus(JNTBus):
         try:
             import bluetooth
             return True
-        except:
+        except Exception:
             return False

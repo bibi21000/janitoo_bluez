@@ -146,7 +146,7 @@ class SpyComponent(JNTComponent):
                 elif dev not in found and dev[2] < self.values["hysteresis"].instances[config]['data']:
                     self.values["presence"].instances[config]['data'] = False
                     dev[2] += 1
-        except:
+        except Exception:
             logger.exception("[%s] - Error when checking bluetooth devices", self.__class__.__name__)
         self._check_active = False
 
