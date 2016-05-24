@@ -46,8 +46,6 @@ from janitoo.component import JNTComponent
 from janitoo.thread import BaseThread
 from janitoo.options import get_option_autostart
 
-from janitoo_bluez.thread_bluez import OID
-
 ##############################################################
 #Check that we are in sync with the official command classes
 #Must be implemented for non-regression
@@ -57,6 +55,8 @@ COMMAND_CAMERA_PREVIEW = 0x2200
 
 assert(COMMAND_DESC[COMMAND_CAMERA_PREVIEW] == 'COMMAND_CAMERA_PREVIEW')
 ##############################################################
+
+from janitoo_bluez import OID
 
 import bluetooth
 

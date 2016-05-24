@@ -48,8 +48,7 @@ COMMAND_CONTROLLER = 0x1050
 assert(COMMAND_DESC[COMMAND_CONTROLLER] == 'COMMAND_CONTROLLER')
 ##############################################################
 
-OID = 'bluez'
-
+from janitoo_bluez import OID
 
 def make_thread(options, force=False):
     if get_option_autostart(options, OID) or force:
