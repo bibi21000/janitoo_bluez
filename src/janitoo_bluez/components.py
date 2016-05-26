@@ -33,18 +33,10 @@ __copyright__ = "Copyright © 2013-2014-2015-2016 Sébastien GALLET aka bibi2100
 # Set default logging handler to avoid "No handler found" warnings.
 import logging
 logger = logging.getLogger(__name__)
-import os, sys
+import os
 import threading
-import time
-import datetime
-import socket
-import re
 
-from janitoo.thread import JNTBusThread
-from janitoo.bus import JNTBus
 from janitoo.component import JNTComponent
-from janitoo.thread import BaseThread
-from janitoo.options import get_option_autostart
 
 ##############################################################
 #Check that we are in sync with the official command classes
@@ -69,7 +61,7 @@ class SpyComponent(JNTComponent):
     def __init__(self, bus=None, addr=None, **kwargs):
         """
         """
-        oid = kwargs.pop('oid', 'bluez.spy')
+        oid = kwargs.pop('oid', '%s.spy'%OID)
         name = kwargs.pop('name', "Spyer")
         product_name = kwargs.pop('product_name', "Spy for bluetooth devices")
         product_type = kwargs.pop('product_type', "Spy for bluetooth devices")
@@ -137,10 +129,10 @@ class SpyComponent(JNTComponent):
         try:
             found = bluetooth.discover_devices()
             for dev in self.devices:
-                if dev[1] in found and self.values["presence"].instances[config]['data'] == False:
+                if dev[1] in found and not self.values["presence"].instances[config]['data']:
                     self.values["presence"].instances[config]['data'] = True
                     # Notify new device
-                elif dev[1] not in found and self.values["presence"].instances[config]['data'] == False and dev[2] == self.values["hysteresis"].instances[config]['data']:
+                elif dev[1] not in found and not self.values["presence"].instances[config]['data'] and dev[2] == self.values["hysteresis"].instances[config]['data']:
                     self.values["presence"].instances[config]['data'] = False
                     # Notify device away
                 elif dev not in found and dev[2] < self.values["hysteresis"].instances[config]['data']:
