@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
-"""The Raspberry camera worker
-
-Installation :
-
-.. code-block:: bash
-
-    sudo apt-get install python-pycamera
+"""The bluetooth bus
 
 """
 

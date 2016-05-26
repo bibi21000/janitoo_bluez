@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""The bluez
+"""The bluetooth thread
 
 """
 
