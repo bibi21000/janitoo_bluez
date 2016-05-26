@@ -112,13 +112,7 @@
       
   <h1>Source code for janitoo_bluez.components</h1><div class="highlight"><pre>
 <span class="c"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;The Raspberry camera worker</span>
-
-<span class="sd">Installation :</span>
-
-<span class="sd">.. code-block:: bash</span>
-
-<span class="sd">    sudo apt-get install python-pycamera</span>
+<span class="sd">&quot;&quot;&quot;The Bluetooth components</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 
@@ -146,18 +140,10 @@
 <span class="c"># Set default logging handler to avoid &quot;No handler found&quot; warnings.</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">datetime</span>
-<span class="kn">import</span> <span class="nn">socket</span>
-<span class="kn">import</span> <span class="nn">re</span>
 
-<span class="kn">from</span> <span class="nn">janitoo.thread</span> <span class="kn">import</span> <span class="n">JNTBusThread</span>
-<span class="kn">from</span> <span class="nn">janitoo.bus</span> <span class="kn">import</span> <span class="n">JNTBus</span>
 <span class="kn">from</span> <span class="nn">janitoo.component</span> <span class="kn">import</span> <span class="n">JNTComponent</span>
-<span class="kn">from</span> <span class="nn">janitoo.thread</span> <span class="kn">import</span> <span class="n">BaseThread</span>
-<span class="kn">from</span> <span class="nn">janitoo.options</span> <span class="kn">import</span> <span class="n">get_option_autostart</span>
 
 <span class="c">##############################################################</span>
 <span class="c">#Check that we are in sync with the official command classes</span>
@@ -182,7 +168,7 @@
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">oid</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;oid&#39;</span><span class="p">,</span> <span class="s">&#39;bluez.spy&#39;</span><span class="p">)</span>
+        <span class="n">oid</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;oid&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">.spy&#39;</span><span class="o">%</span><span class="n">OID</span><span class="p">)</span>
         <span class="n">name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="s">&quot;Spyer&quot;</span><span class="p">)</span>
         <span class="n">product_name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;product_name&#39;</span><span class="p">,</span> <span class="s">&quot;Spy for bluetooth devices&quot;</span><span class="p">)</span>
         <span class="n">product_type</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;product_type&#39;</span><span class="p">,</span> <span class="s">&quot;Spy for bluetooth devices&quot;</span><span class="p">)</span>
@@ -250,10 +236,10 @@
         <span class="k">try</span><span class="p">:</span>
             <span class="n">found</span> <span class="o">=</span> <span class="n">bluetooth</span><span class="o">.</span><span class="n">discover_devices</span><span class="p">()</span>
             <span class="k">for</span> <span class="n">dev</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">devices</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">dev</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">found</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&quot;presence&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">config</span><span class="p">][</span><span class="s">&#39;data&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">dev</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">found</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&quot;presence&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">config</span><span class="p">][</span><span class="s">&#39;data&#39;</span><span class="p">]:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&quot;presence&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">config</span><span class="p">][</span><span class="s">&#39;data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
                     <span class="c"># Notify new device</span>
-                <span class="k">elif</span> <span class="n">dev</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">found</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&quot;presence&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">config</span><span class="p">][</span><span class="s">&#39;data&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="bp">False</span> <span class="ow">and</span> <span class="n">dev</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&quot;hysteresis&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">config</span><span class="p">][</span><span class="s">&#39;data&#39;</span><span class="p">]:</span>
+                <span class="k">elif</span> <span class="n">dev</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">found</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&quot;presence&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">config</span><span class="p">][</span><span class="s">&#39;data&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">dev</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&quot;hysteresis&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">config</span><span class="p">][</span><span class="s">&#39;data&#39;</span><span class="p">]:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&quot;presence&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">config</span><span class="p">][</span><span class="s">&#39;data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
                     <span class="c"># Notify device away</span>
                 <span class="k">elif</span> <span class="n">dev</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">found</span> <span class="ow">and</span> <span class="n">dev</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&quot;hysteresis&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">config</span><span class="p">][</span><span class="s">&#39;data&#39;</span><span class="p">]:</span>
