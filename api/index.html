@@ -5,13 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>janitoo_bluez package &mdash; janitoo_bluez 0.0.6 documentation</title>
+    <title>janitoo_bluez package &#8212; janitoo_bluez 0.0.6 documentation</title>
     
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -19,7 +17,8 @@
         VERSION:     '0.0.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -30,16 +29,17 @@
     <script type="text/javascript" src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="janitoo_bluez 0.0.6 documentation" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
   </head>
-  <body>
+  <body role="document">
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -118,12 +118,12 @@
 <p>The bluetooth bus</p>
 <dl class="class">
 <dt id="janitoo_bluez.bus_bluez.BluezBus">
-<em class="property">class </em><tt class="descclassname">janitoo_bluez.bus_bluez.</tt><tt class="descname">BluezBus</tt><big>(</big><em>oid='bluez'</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/bus_bluez.html#BluezBus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.bus_bluez.BluezBus" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">janitoo.bus.JNTBus</span></tt></p>
+<em class="property">class </em><code class="descclassname">janitoo_bluez.bus_bluez.</code><code class="descname">BluezBus</code><span class="sig-paren">(</span><em>oid='bluez'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_bluez/bus_bluez.html#BluezBus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.bus_bluez.BluezBus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">janitoo.bus.JNTBus</span></code></p>
 <p>A pseudo-bus to handle bluetooth</p>
 <dl class="method">
 <dt id="janitoo_bluez.bus_bluez.BluezBus.check_heartbeat">
-<tt class="descname">check_heartbeat</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/bus_bluez.html#BluezBus.check_heartbeat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.bus_bluez.BluezBus.check_heartbeat" title="Permalink to this definition">¶</a></dt>
+<code class="descname">check_heartbeat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_bluez/bus_bluez.html#BluezBus.check_heartbeat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.bus_bluez.BluezBus.check_heartbeat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check that the bus is &#8216;available&#8217;. Is replaced by the node one when it&#8217;s creates</p>
 </dd></dl>
 
@@ -135,42 +135,42 @@
 <p>The Bluetooth components</p>
 <dl class="class">
 <dt id="janitoo_bluez.components.SpyComponent">
-<em class="property">class </em><tt class="descclassname">janitoo_bluez.components.</tt><tt class="descname">SpyComponent</tt><big>(</big><em>bus=None</em>, <em>addr=None</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">janitoo.component.JNTComponent</span></tt></p>
+<em class="property">class </em><code class="descclassname">janitoo_bluez.components.</code><code class="descname">SpyComponent</code><span class="sig-paren">(</span><em>bus=None</em>, <em>addr=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">janitoo.component.JNTComponent</span></code></p>
 <p>A spy component for bluetooth</p>
 <dl class="method">
 <dt id="janitoo_bluez.components.SpyComponent.check_devices">
-<tt class="descname">check_devices</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.check_devices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.check_devices" title="Permalink to this definition">¶</a></dt>
+<code class="descname">check_devices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.check_devices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.check_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make a check using a timer.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_bluez.components.SpyComponent.check_heartbeat">
-<tt class="descname">check_heartbeat</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.check_heartbeat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.check_heartbeat" title="Permalink to this definition">¶</a></dt>
+<code class="descname">check_heartbeat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.check_heartbeat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.check_heartbeat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check that the component is &#8216;available&#8217;</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_bluez.components.SpyComponent.on_check">
-<tt class="descname">on_check</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.on_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.on_check" title="Permalink to this definition">¶</a></dt>
+<code class="descname">on_check</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.on_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.on_check" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make a check using a timer.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_bluez.components.SpyComponent.start">
-<tt class="descname">start</tt><big>(</big><em>mqttc</em><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.start" title="Permalink to this definition">¶</a></dt>
+<code class="descname">start</code><span class="sig-paren">(</span><em>mqttc</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start the component.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_bluez.components.SpyComponent.stop">
-<tt class="descname">stop</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.stop" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop the component.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="janitoo_bluez.components.SpyComponent.stop_check">
-<tt class="descname">stop_check</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.stop_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.stop_check" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stop_check</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_bluez/components.html#SpyComponent.stop_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.SpyComponent.stop_check" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check the sonic component</p>
 </dd></dl>
 
@@ -178,7 +178,7 @@
 
 <dl class="function">
 <dt id="janitoo_bluez.components.make_spy">
-<tt class="descclassname">janitoo_bluez.components.</tt><tt class="descname">make_spy</tt><big>(</big><em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/components.html#make_spy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.make_spy" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">janitoo_bluez.components.</code><code class="descname">make_spy</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_bluez/components.html#make_spy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.components.make_spy" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -187,12 +187,12 @@
 <p>The bluetooth thread</p>
 <dl class="class">
 <dt id="janitoo_bluez.thread_bluez.BluezThread">
-<em class="property">class </em><tt class="descclassname">janitoo_bluez.thread_bluez.</tt><tt class="descname">BluezThread</tt><big>(</big><em>options=None</em><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/thread_bluez.html#BluezThread"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.thread_bluez.BluezThread" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">janitoo.thread.JNTBusThread</span></tt></p>
+<em class="property">class </em><code class="descclassname">janitoo_bluez.thread_bluez.</code><code class="descname">BluezThread</code><span class="sig-paren">(</span><em>options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_bluez/thread_bluez.html#BluezThread"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.thread_bluez.BluezThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">janitoo.thread.JNTBusThread</span></code></p>
 <p>The I2C thread</p>
 <dl class="method">
 <dt id="janitoo_bluez.thread_bluez.BluezThread.init_bus">
-<tt class="descname">init_bus</tt><big>(</big><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/thread_bluez.html#BluezThread.init_bus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.thread_bluez.BluezThread.init_bus" title="Permalink to this definition">¶</a></dt>
+<code class="descname">init_bus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_bluez/thread_bluez.html#BluezThread.init_bus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.thread_bluez.BluezThread.init_bus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build the bus</p>
 </dd></dl>
 
@@ -200,7 +200,7 @@
 
 <dl class="function">
 <dt id="janitoo_bluez.thread_bluez.make_thread">
-<tt class="descclassname">janitoo_bluez.thread_bluez.</tt><tt class="descname">make_thread</tt><big>(</big><em>options</em>, <em>force=False</em><big>)</big><a class="reference internal" href="../_modules/janitoo_bluez/thread_bluez.html#make_thread"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.thread_bluez.make_thread" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">janitoo_bluez.thread_bluez.</code><code class="descname">make_thread</code><span class="sig-paren">(</span><em>options</em>, <em>force=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/janitoo_bluez/thread_bluez.html#make_thread"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#janitoo_bluez.thread_bluez.make_thread" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -222,7 +222,7 @@
     </p>
     <p>
         &copy; Copyright 2014,2015,2016 Sébastien GALLET aka bibi2100 &lt;bibi21000@gmail.com&gt;.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.<br/>
     </p>
   </div>
 </footer>

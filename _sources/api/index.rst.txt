@@ -1,0 +1,38 @@
+janitoo_bluez package
+=====================
+
+Submodules
+----------
+
+janitoo_bluez.bus_bluez module
+------------------------------
+
+.. automodule:: janitoo_bluez.bus_bluez
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+janitoo_bluez.components module
+-------------------------------
+
+.. automodule:: janitoo_bluez.components
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+janitoo_bluez.thread_bluez module
+---------------------------------
+
+.. automodule:: janitoo_bluez.thread_bluez
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: janitoo_bluez
+    :members:
+    :undoc-members:
+    :show-inheritance:
